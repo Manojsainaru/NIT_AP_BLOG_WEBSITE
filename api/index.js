@@ -23,8 +23,11 @@ const MONGO_URI = process.env.MONGO_URI;
 const JWT_SECRET = process.env.JWT_SECRET;
 const SALT_ROUNDS = 10; // Number of bcrypt salt rounds
 
+// Frontend URL (Update this in the .env file)
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
+
 // Middleware setup
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: FRONTEND_URL }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve static files

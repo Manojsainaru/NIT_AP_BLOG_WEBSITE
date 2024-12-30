@@ -12,7 +12,7 @@ export default function EditPost() {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://nit-ap-blog-website-al5p.onrender.com/api/post/${id}`)
       .then(response => response.json())
       .then(data => {
         setTitle(data.title);
@@ -30,7 +30,7 @@ export default function EditPost() {
     data.set('content', content);
     if (files) data.append('cover', files[0]);
 
-    const response = await fetch(`http://localhost:4000/post/${id}`, {
+    const response = await fetch(`https://nit-ap-blog-website-al5p.onrender.com/api/post/${id}`, {
       method: 'PUT',
       body: data,
       credentials: 'include',
@@ -64,7 +64,7 @@ export default function EditPost() {
         type="file"
         onChange={e => setFiles(e.target.files)}
       />
-      {cover && <img src={`http://localhost:4000${cover}`} alt="Cover" />}
+      {cover && <img src={`https://nit-ap-blog-website-al5p.onrender.com/${cover}`} alt="Cover" />}
       <button type="submit">Update Post</button>
     </form>
   );

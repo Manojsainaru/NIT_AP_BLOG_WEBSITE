@@ -6,17 +6,19 @@ export default function Header() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://nit-ap-blog-website-al5p.onrender.com/api/profile', {
       credentials: 'include',
     }).then(response => {
-      response.json().then(userInfo => {
-        setUserInfo(userInfo);
-      });
+      if (response.ok) {
+        response.json().then(userInfo => {
+          setUserInfo(userInfo);
+        });
+      }
     });
   }, [setUserInfo]);
 
   function logout() {
-    fetch('http://localhost:4000/logout', {
+    fetch('https://nit-ap-blog-website-al5p.onrender.com/api/logout', {
       credentials: 'include',
       method: 'POST',
     }).then(() => setUserInfo(null));
@@ -27,7 +29,7 @@ export default function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-      <img src="/nitap_logo1.jpg" alt="NIT Andhra Logo" className="logo-img" />
+        <img src="/nitap_logo1.jpg" alt="NIT Andhra Logo" className="logo-img" />
         NIT Andhra Insights
       </Link>
       <nav>

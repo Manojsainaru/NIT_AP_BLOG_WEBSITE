@@ -5,7 +5,7 @@ export default function Post({ _id, title, cover, summary, createdAt, author }) 
   return (
     <div className="post">
       <Link to={`/post/${_id}`}>
-        {cover && <img src={`http://localhost:4000${cover}`} alt={title} />}
+        {cover && <img src={`https://nit-ap-blog-website-al5p.onrender.com/${cover}`} alt={title} />}
         <h2>{title}</h2>
         <p className="info">
           <a className="author">{author.username}</a>

@@ -7,11 +7,11 @@ export default function PostPage() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://nit-ap-blog-website-al5p.onrender.com/api/post/${id}`)
       .then(response => response.json())
       .then(data => setPost(data));
 
-    fetch('http://localhost:4000/profile', {
+    fetch('https://nit-ap-blog-website-al5p.onrender.com/api/profile', {
       credentials: 'include',
     })
       .then(response => response.json())
@@ -25,7 +25,7 @@ export default function PostPage() {
   return (
     <div className="post-page">
       <h1>{post.title}</h1>
-      {post.cover && <img src={`http://localhost:4000${post.cover}`} alt={post.title} />}
+      {post.cover && <img src={`https://nit-ap-blog-website-al5p.onrender.com/${post.cover}`} alt={post.title} />}
       <p>{post.summary}</p>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
       <p>By {post.author.username}</p>

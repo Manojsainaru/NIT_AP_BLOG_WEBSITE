@@ -17,7 +17,7 @@ export default function CreatePost() {
     data.set('content', content);
     if (files) data.append('cover', files[0]);
 
-    const response = await fetch('http://localhost:4000/post', {
+    const response = await fetch('https://nit-ap-blog-website-al5p.onrender.com/api/post', {
       method: 'POST',
       body: data,
       credentials: 'include',
