@@ -26,6 +26,7 @@ const SALT_ROUNDS = 10; // Number of bcrypt salt rounds
 // Frontend URL (Update this in the .env file)
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
 
+
 // Middleware setup
 app.use(cors({ credentials: true, origin: FRONTEND_URL }));
 app.use(express.json());
