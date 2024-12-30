@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #f1f1f1;
+  background: url('nitap.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay; /* Changed blend mode for a lighter effect */
+  background-color: rgba(0, 0, 0, 0.5); /* Reduced opacity for a less dark effect */
+  line-height: 1.6;
+}
+
+/* Links */
+/* a {
+  cursor: pointer;
+  color: #d7e1ec; /* Light grayish-blue color */
+  /* text-decoration: none; */
+  /* transition: color 0.3s ease, text-shadow 0.3s ease;
+} */
+
+
+/* a:hover {
+  color: #00bfff; /* Bright, vibrant blue color on hover */
+  /* text-shadow: 0 0 8px #00bfff, 0 0 16px #00bfff, 0 0 24px #00bfff; /* Bright glow effect */
+
+
+a {
+  cursor: pointer;
+  color: #d7e1ec; /* Light grayish-blue color */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #00ffff; /* Bright cyan color on hover */
+  text-shadow: 
+      0 0 10px #00ffff, /* Outer glow */
+      0 0 20px #00ffff, /* Outer glow */
+      0 0 30px #00ffff, /* Stronger glow */
+      0 0 40px #00ffff; /* Intense glow */
+}
+
+
+
+/* Images */
+img {
+  max-height: 35rem;
+  border-radius: 8px;
+  max-width: 15rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Container */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Apply similar styling to the header */
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header .logo-img {
+  height: 40px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Blog Post Grid */
+div.post {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image takes up 1 fraction, content takes up 2 fractions */
+  gap: 20px; /* Space between the image and the content */
+  margin-bottom: 30px; /* Space below each post */
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+div.post div.image {
+  max-height: 300px; /* Set a maximum height for the image container */
+  overflow: hidden;  /* Hide any overflow */
+  border-radius: 8px; /* Add rounded corners for a polished look */
+}
+
+div.post div.image img {
+  width: 30rem; /* Make the image take up the full width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  object-fit: cover; /* Cover the container without distorting the aspect ratio */
+  object-position: center; /* Center the image within the container */
+}
+
+div.post div.texts {
+  display: flex;
+  flex-direction: column;
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
+
+div.post div.texts h2:hover {
+  color: #e0e0e0;
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info {
+  margin: 24px 0;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+div.post p.info a.author {
+  color: #f1f1f1;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+div.post p.info a.author:hover {
+  color: #e0e0e0;
+}
+
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.8rem;
+  color: #ddd;
+}
+
+/* Forms // Forms */
+form.login, form.register {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007BFF;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #007BFF;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #66b2ff; /* Light blue color for hover effect */
+}
+
+/* Login/Register Form Header */
+form.login h1, form.register h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+}
+
+
+
+/* Single Post Page */
+div.post-page div.image {
+  height: auto; /* Make the height flexible based on content */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+div.post-page div.image img {
+  width: 100%;
+  height: auto; /* Ensure the image maintains its aspect ratio */
+  object-fit: cover;
+  object-position: center center;
+}
+
+div.post-page a {
+  color: #007BFF;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 2.5rem;
+  color: #f1f1f1;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 1rem;
+  color: #aaa;
+  margin: 10px 0;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ccc;
+}
+
+div.content p {
+  line-height: 1.7rem;
+  margin: 30px 0;
+  color: #ddd;
+}
+
+div.content li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Edit Button */
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+  background-color: #007BFF;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+div.post-page a.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+a svg {
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Quill Editor Toolbar */
+.ql-toolbar.ql-snow {
+  background-color: #ffffff; /* Set the background to white */
+  padding: 10px; /* Optional: Add some padding for spacing */
+  border-radius: 5px; /* Optional: Slightly round the corners */
+}
